@@ -50,18 +50,52 @@ A specialized HTML, Node.js and MongoDB-powered e-commerce platform focused on p
 
 ## 📸 Output Screenshots
 
+### ✅ Secure User Authentication
+![Login Screen 1](output%20images/login1.png)
+![Login Screen 2](output%20images/login2.png)
+
+---
+
 ### 🛍️ Dynamic Product Catalog
-![Product Listing](images/product_listing.png)
+![Product Catalog](output%20images/products.png)
+![Product Search](output%20images/search.png)
 
-### 🔐 User Authentication
-![User Login](images/login_page.png)
+---
 
-### 📩 Cart Summary Email Notification
-![Email Notification](images/email_summary.png)
+### 📋 Competition-Based Product Segregation
+![FRC Products](output%20images/frc.png)
+![FTC Products](output%20images/ftc.png)
 
-### 🛠️ Admin Support Dashboard
-![Support Dashboard](images/support_dashboard.png)
+---
+
+### 📩 Contact Support System
+![Contact Support Form](output%20images/contact.png)
+
+---
+
+### 🛒 Cart Summary Email Notifications
+![Cart Email Notification](output%20images/email.png)
+
+---
+
+### 🎁 Promo Code Management
+![Promo Code Application](output%20images/promo.png)
+
+---
 
 ### 📥 Downloadable CAD Files
-![CAD Download](images/cad_download.png)
+![Downloadable CAD Files](output%20images/download.png)
+
+---
+
+### 💾 MongoDB Database Integration
+![MongoDB Products Collection](output%20images/mongo1.png)
+![MongoDB Users Collection](output%20images/mongo2.png)
+![MongoDB Orders Collection](output%20images/mongo3.png)
+
+---
+
+### 🚀 Real-time Inventory Updates
+![MongoDB Real-time Inventory](output%20images/mongo4.png)
+
 
