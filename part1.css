@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #303030;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#hero {
+    background: url('hero-background.jpg') center/cover no-repeat;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #303030;
+    color: #fff;
+}
+
+/* Apply grayscale filter by default */
+.grayscale-image {
+    filter: grayscale(100%);
+}
+
+/* Remove grayscale filter on hover */
+.grayscale-image:hover {
+    filter: grayscale(0%);
+}
+
+.grayscale-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+/*Display overlay text on hover*/
+.structurecontainer:hover .overlay_text_struct{
+    opacity: 0;
+}

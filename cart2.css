@@ -1,0 +1,267 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Product Section */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 65%;
+}
+
+/* Cart Section */
+.cart {
+    width: 30%;
+    min-width: 300px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Make Images Responsive */
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .products, .cart {
+        width: 100%;
+    }
+}
+
+/* Product Card */
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Product Image */
+.card img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Product Description */
+.card-body {
+    width: 50%;
+    padding: 15px;
+    background: #ff6600;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Title */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Description */
+.card-text {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Price */
+.card-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Strike-through for Original Price */
+.card-price del {
+    font-size: 1rem;
+    color: #ddd;
+    margin-right: 10px;
+}
+
+/* Add to Cart Button */
+.btn-add {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.btn-add:hover {
+    background: #333;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ff6600;
+    color: #fff;
+    position: relative;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    border-top: 5px solid black;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.contact-info, .categories, .product-types {
+    flex-basis: 30%;
+    text-align: left;
+    border-right: 1px solid white;
+    padding: 10px;
+    margin: 5px;
+}
+
+.footer-content div:last-child {
+    border-right: none;
+}
+
+.footer a {
+    color: white;
+}
+
+/* Footer Animation */
+.wave {
+    position: absolute;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('WAVE_ORANGE.png');
+    background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+    opacity: 1;
+    animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animateWaves {
+    0% { background-position-x: 2000px; }
+    100% { background-positon-x: 0px; }
+}
+
+@keyframes animate {
+    0% { background-position-x: -1000px; }
+    100% { background-positon-x: 0px; }
+}
+
+/* Navbar */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+.navbar-dark {
+    background-color: #ff6600 !important;
+    padding: 15px;
+}
+
+.navbar-brand img {
+    animation: slideLeft 1s ease-in-out;
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(500%); }
+    to { transform: translateX(0); }
+}
+
+.navbar-text.text-slide {
+    opacity: 0;
+    animation: slideRight 1s ease-in-out forwards;
+    animation-delay: 0.7s;
+}
+
+@keyframes slideRight {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Promo Section */
+#promo-section {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.promo-saved {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Responsive Promo Codes */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info, .categories, .product-types {
+        flex-basis: 100%;
+        border-right: none;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .cart {
+        width: 100%;
+    }
+}

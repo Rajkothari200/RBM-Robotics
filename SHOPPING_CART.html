@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>RBM Robotics - Shopping Cart</title>
+    <link rel="icon" href="TITLELOGO-02.png" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="HOME PAGE.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://www.w3schools.com/lib/w3.js"></script>  
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+	<!-- Demo CSS (No need to include it into your project) -->
+	<link rel="stylesheet" href="css/demo.css">
+  
+  </head>
+  <body>
+    <header>
+      <!--Bootstrap Navigation Bar-->
+      <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+          <a class="navbar-brand" href="HOME PAGE.html">
+          <img src="LOGO-03.png" class="logo" width="160" height="90">
+          </a>
+          <!--<h4><span class="navbar-text text-slide">Quality Robotics Components</span></h4>-->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </header>
+  
+      
+ <main>
+     <!-- Start DEMO HTML (Use the following code into your project)-->
+     
+<figure class="snip">                <!-- first -->
+    <h4>Driver Hub</h4>
+    <div class="image">
+      <img class="slide1" src="driverHub1.png" />
+    </div>
+    <figcaption>
+      <p>The REV Driver Hub (REV-31-1596) is a compact mobile computing device designed for interfacing with the Control Hub (REV-31-1595). 
+        The Driver Hub is an easy to use, dependable, and durable device for use in classroom and the competition to control robots.
+    <div class="price">
+        <s>₹6000</s><div class="real" data-price="4000">₹4000</div>
+      </div>
+    </figcaption>
+    <a class="add-to-cart" href="#">Add to Cart</a>
+  </figure>
+  
+  <figure class="snip">                <!-- second -->
+    <h4>Starter Bot</h4>
+    <div class="image">
+      <img class="slide2" src="starterbot.png" />
+    </div>
+    <figcaption>
+      <p>This starter bot is the culmination of <br> analyzing the game, 
+        prototyping, and technical documentation.
+        The RBM FTC Starter Bot is designed to give teams a starting point for building their robot, while leaving room for iteration, revision, and adaptation to the games challenges.
+      </p>    
+      <div class="price">
+        <s>₹10000</s><div class="real" data-price="8000">₹8000</div>
+      </div>
+    </figcaption>
+    <a class="add-to-cart" href="#">Add to Cart</a>
+  </figure>
+  
+  <figure class="snip">               <!-- third -->
+    <h4>Mecanum Wheels</h4>
+    <div class="image">
+      <img class="slide3" src="wheels i1.png" />
+    </div>
+    <figcaption>
+      <p>REV Mecanum Wheels are steel plates with rollers supported by ball bearings allowing for the perfect combination of wheel rigidity and roller movement. 
+        Included in the set of wheels are Universal Hex Adapter making mounting to 5mm hex shaft easy. 
+      <div class="price">
+        <s>₹3000</s><div class="real" data-price="2000">₹2000</div>
+      </div>
+    </figcaption>
+    <a class="add-to-cart" href="#">Add to Cart</a>
+  </figure>
+  
+  <figure class="snip">               <!-- Fourth -->
+    <h4>Gears</h4>
+    <div class="image">
+      <img class="slide4" src="Gear1.png" />
+    </div>
+    <figcaption>
+      <p>DUO Plastic #25 Sprockets are compatible with the REV DUO System and fit on a 5mm hex shaft.
+        It provides students all the necessary interfaces for robotics and mechatronics projects with multiple programming language options.
+      </p>    
+      <div class="price">
+        <s>₹1000</s><div class="real" data-price="800">₹800</div>
+      </div>
+    </figcaption>
+    <a class="add-to-cart" href="#">Add to Cart</a>
+  </figure>
+
+  
+  <figure class="snip">               <!-- Fifth -->
+    <h4>Ultraplanetary Motor</h4>
+    <div class="image">
+        <img class="slide4" src="hdhex1.png" />
+    </div>
+    <figcaption>
+        <p>The UltraPlanetary Gearbox Kit is the entry point into using the UltraPlanetary System. 
+        The kit comes with UltraPlanetary Cartridges to support six different final gear reductions ranging from nominally 3:1 to 60:1 allowing for the right amount of torque for the application at hand.
+        </p>    
+        <div class="price">
+            <s>₹3500</s><div class="real" data-price="800">₹2500</div>
+        </div>
+    </figcaption>
+    <a class="add-to-cart" href="#">Add to Cart</a>
+</figure>
+
+
+
+
+
+  <a class="cart" href="javascript:void(0);" title="Your Cart">
+    <img src="./img/cart.png" />
+    <span id="count-item" data-count="0">0 item</span>
+  </a>
+
+
+  <!-- --------------------Check out ---------------- -->
+  <div class="checkout-container">
+    <div class="table">
+    <span class="empty">Your cart is empty!</span>
+
+    <div class="col1-name"></div>
+    <div class="col2-price"></div>
+    </div>
+    <div class="bin"><span>Clear All</span><img id="bin" src="./img/delete.png" style="width:40px" /></div>
+    <div class="total">
+      <div class="total-text">Total :</div>
+      <div class="total-amount">₹ 0</div>
+    </div>
+    <div class="checkout" onclick="document.getElementById('id01').style.display='block'">Check out</div>
+    
+  </div>
+  
+          <!-- -----------------Bill------------- -->
+ <div id="id01" class="modal">
+  <div class="wrapper">
+    <div class="bill-content">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+    <h1 class="box-title">Checkout</h1>
+    <div class="price-total">
+      <span>PAY</span>
+      <div class="pay-last">₹ 0</div>
+    </div>
+    <form>
+      
+      <div class="form-text">
+        <label>Card Number</label>
+        <input name="card-number" type="text" required>
+      </div>
+      <div class="form-text">
+        <label>Card Verification Value</label>
+        <input name="name" type="text" placeholder="CVV" required>
+      </div>
+      <div class="form-text" id="col01">
+        <label>Expiry Date</label>
+        <input name="card-number" type="text" placeholder="MM/YY" maxlength="3" required>
+      </div>
+      <div class="form-text"  id="col02">
+        <label>Coupon Code</label>
+        <input name="card-number" type="text">
+      </div>
+      
+      <button id="end">PAY NOW</button>
+    </form>
+      <button id="coupon">Get coupon code</button>
+    </div>
+  </div>
+ </div> 
+     
+ </main>
+ 
+      
+ <footer style="background-color: #ff6600;">
+  <center>
+  <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff; border-top: 1px solid #ffffff;">&copy; 2023 RBM Robotics. All rights reserved.</p></center>
+</footer>
+ <script  src="./js/script.js"></script>
+      
+  </body>
+</html>

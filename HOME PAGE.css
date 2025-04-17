@@ -1,0 +1,509 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* White background */
+    color: #ff6600; /* Orange text color */
+}
+
+header {
+    background-color: #000; /* Orange background for the header */
+    color: #fff;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff; /* White text color for navigation links */
+}
+
+.navbar-dark {
+    background-color: #ff6600 !important; /* !important is used to override Bootstrap styles */
+    padding: 15px 15px;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-color: #fff; /* White background for the mobile menu icon */
+}
+
+.navbar-brand img
+{
+    animation: slideLeft 1s ease-in-out;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(500%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}   
+
+.navbar-text.text-slide {
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: slideRight 1s ease-in-out forwards; /* Define the sliding animation */
+    animation-delay: 0.7s;
+    color: white;
+}
+
+/* Keyframes for sliding animation */
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.nav-loginlink img:hover{
+    transform: scale(1.2); /* Enlarge the image by 20% */
+}
+
+.section {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product {
+    border: 1px solid #ff6600; /* Orange border for product boxes */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ff6600; /* Orange background for the footer */
+    color: #fff;
+}
+
+/*About US section Css*/
+.column {
+    float: left;
+    width: 20%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    margin: auto;
+}
+  
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+  
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+  
+@media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+}
+
+.container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*Navbar Text Format*/
+.navbar-nav ml-auto {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.1px;
+  }
+
+  .nav-item {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .nav-item::before,
+  .nav-item::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #00fffc;
+      transform: scaleX(0);
+      transition: transform 0.25s;
+  }
+
+  .nav-item::before {
+      top: -1px;
+      transform-origin: left;
+  }
+
+  .nav-item::after {
+      bottom: -1px;
+      transform-origin: right;
+  }
+
+  .nav-item:hover::before,
+  .nav-item:hover::after,
+  .active::before,
+  .active::after {
+      transform: scaleX(1);
+  }
+
+
+/*CONTACT US CSS*/
+
+.footer {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid rgb(0, 0, 0); /* Add a black top border with 10px width */
+    position: relative;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.contact-info,
+.categories,
+.product-types {
+    flex-basis: 30%;
+    text-align: left;
+    border-right: 1px solid rgb(255, 255, 255); /* Add a black right border with 10px width */
+    padding: 10px;
+    margin: 5px;
+}
+
+.footer-content div:last-child {
+    border-right: none; /* Remove the right border for the last content section */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgb(0, 0, 0);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d45703;
+    color: white;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgb(0, 0, 0);
+}
+.footer a {
+    color: white; /* Set the link color to white */
+}
+
+/*FOOTER ANIMATION*/
+
+
+.wave {
+    position: absolute;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('WAVE_ORANGE.png');
+    background-size: 1000px 100px;
+  }
+  
+  .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+  }
+  
+  .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+  }
+  
+  .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+  }
+  
+  .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+  }
+  
+  @keyframes animateWaves {
+    0% {
+      background-position-x: 2000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position-x: -1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+  
+
+
+
+
+
+/*ABOUT US*/
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.image-container {
+    text-align: center;
+    margin: 10px;
+    flex-basis: 50%;
+}
+
+.image-container img {
+    max-width: 100%;
+}
+
+.card-container {
+    display: flex;
+  }
+  
+.card {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    box-shadow: -1px 0px 3px 3px #ff6600;
+  }
+  
+  .card img {
+    align-content: center;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    margin-top: 10px;
+    font-family: 'Vampire Wars', cursive; 
+    letter-spacing: 4px;
+    font-size: 38px;
+  }
+  
+  .card p {
+    margin-top: 5px;
+    font-family: 'Montserrat', san-serif; 
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.animated-left {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.animated-right {
+    animation: slideInFromRight 1s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.ion,.duo {
+    animation: fadeIn 4s;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.3s ease 0s;
+}
+.success-message {
+    display: none;
+    color: green;
+    margin-top: 10px;
+}
+
+
+/*POP OUT ANIMATION ABOUT US*/
+
+.h3 {
+    cursor: pointer;
+}
+
+.pop-out-animation {
+    animation: popOut 1.5s;
+}
+
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*SLIDESHOW ANIMATION*/
+
+* {
+    box-sizing: border-box;
+}
+
+.slideshow-container {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+}
+
+.slideshow-img {
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+ /*Overlay Text for the Email*/
+.gmail_container:hover .overlay_text {
+    display: block;
+}
+
+.overlay_text {
+    display: none;
+    position: absolute;
+    top: 128%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: "Montserrat";
+    border-radius: 10px;
+} 
+
+/*RESPONSIVE WEBSITE*/
+
+.hover-text {
+    display: none;
+    position: absolute;
+    background-color: #d45703;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.phone-number:hover + .hover-text {
+    display: block;
+}

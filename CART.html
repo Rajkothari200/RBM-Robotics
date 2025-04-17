@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RBM Robotics - Cart</title>
+	<link rel="icon" href="TITLELOGO-02.png" type="image/png">
+	<link rel="stylesheet" href="CART.css">
+</head>
+
+<body>
+	<div class="container" id="container">
+
+		<div class="form-container sign-in-container">
+			<form name="sign" action="https://sheetdb.io/api/v1/b6q20lvo8fvuk" method="post" id="cart">
+				<div style="display: flex; align-items: center;">
+					<a href="HOME PAGE.html" style="text-decoration: none; color: #ffffff;">
+						<img src="ICON.png" width=30 height=30 style="margin-left: -313px;"/>
+					</a>
+					<p style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 40px; margin-bottom: 20px; margin-left: 10px;">Add to Cart</p>
+				</div>
+				
+				<h1
+					style="font-family: 'Montserrat', sans-serif; font-weight: 500; margin-bottom: 30px; font-size: 15px;">
+					Enter your contact details and mode number of the part you wish to buy<br>Our team will reach out to
+					you for delivery</h1>
+				<input id="name" name="data[Name]" type="name" placeholder="Name" required />
+				<input id="email" name="data[Email]" type="email" placeholder="Email" required />
+				<input id="tel" name="data[Phone Number]" type="tel" placeholder="Phone Number" minlength="10"
+					maxlength="10" required />
+				<input id="model" name="data[Model No]" type="tel" placeholder="Model Number" minlength="5"
+					maxlength="5" required />
+				<br>
+				<div>
+					<button class="submit-button" onclick="submitAnimation(this)"
+						style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff; font-size: 13px;"
+						type="submit">Add to Cart</button>
+					<p class="success-message" id="successMessage"></p>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	<script src="GOOGLE SIGN IN.js"></script>
+	<script>
+		function submitAnimation(button) {
+			button.innerHTML = 'If email is entered correctly, you will be redirected to Home Page';
+			setTimeout(function () {
+				button.innerHTML = 'Add to Cart';
+			}, 2000);
+
+		}
+	</script>
+	<script> //CART LINKING SHEETS
+		var form1 = document.getElementById('cart');
+		form1.addEventListener("submit", a => {
+			a.preventDefault();
+			fetch(form1.action, {
+				method: "POST",
+				body: new FormData(document.getElementById("cart")),
+			}).then(
+				response => response.json()
+			)
+				.then(data => {
+					console.log(data);
+					var newPage = "HOME PAGE.html";
+					window.location.href = newPage;
+				});
+		});
+	</script>
+	<script> //SIGN UP LINKING SHEETS
+		var form = document.getElementById('signu');
+		form.addEventListener("submit", e => {
+			e.preventDefault();
+			fetch(form.action, {
+				method: "POST",
+				body: new FormData(document.getElementById("signu")),
+			}).then(
+				response => response.json()
+			)
+				.then(data => {
+					console.log(data);
+					var newPage = "HOME PAGE.html";
+					window.location.href = newPage;
+				});
+		});
+	</script>
+
+</body>
+
+</html>

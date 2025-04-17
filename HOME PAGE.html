@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBM Robotics</title>
+    <link rel="icon" href="TITLELOGO-02.png" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="HOME PAGE.css">
+</head>
+<body>
+    
+    <header>
+        <!--Bootstrap Navigation Bar-->
+        <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+            <a class="navbar-brand" href="#">
+            <img src="LOGO-03.png" class="logo" width="160" height="90">
+            </a>
+            <!--<h4><span class="navbar-text text-slide">Quality Robotics Components</span></h4>-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <form class="form-inline my-2 my-lg-0" onkeypress="return event.keyCode != 13;">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <img src="search.png" alt="Search Image" width="20" height="20">
+                                    <i class="fas fa-search"></i> 
+                                </span>
+                            </div>
+                            <input class="form-control mr-sm-2" type="search" placeholder="Enter Parts" aria-label="Search" id="searchInput" onkeydown="if (event.keyCode == 13) searchItems()">
+                        </div>
+                    </form>
+                         
+                    <li class="nav-item">
+                        <br><h5 class="homefont" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff;"><a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a></h5>
+                    </li>
+                    <li class="nav-item">
+                        <br><h5 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff;"><a class="nav-link" href="#part">Parts</a></h5>
+                    </li>
+                    <li class="nav-item">
+                        <br><h5 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff;"><a class="nav-link" onclick="addPopOutAnimation()" href="#aboutus">About Us</a></h5>
+                    </li>
+                    <li class="nav-item">
+                        <br><h5 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff;"><a class="nav-link" href="#footer">Contact Us</a></h5>
+                    </li>
+                    <!--<li class="nav-item">
+                        <br><h5 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff;"><a class="nav-link" onclick="logout()">Logout</a></h5>
+                    </li>
+                    <li class="nav-item">
+                        <div class="gmail_container">
+                        <h6></h6>
+                        &nbsp;&nbsp;<a><img id="googleimage" class="rounded-circle" width="60" height="60"></img></a>
+                        <h5></h5>
+                            <div class="overlay_text">
+                                <p style="font-family: 'Montserrat', sans-serif; font-weight: 700; color:#ffffff; font-size:16px;white-space: nowrap;"class="text-center" id="googlename"></p>
+                            </div>
+                            </div>
+                    </li>-->
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <script>
+        function handleKeyPress(event) {
+            // Check if the Enter key is pressed (key code 13)
+            if (event.keyCode === 13) {
+                // Prevent the default form submission
+                event.preventDefault();
+                
+                // Call the searchItems() function
+                searchItems();
+            }
+        }
+    
+        function searchItems() {
+            var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+            console.log("Search Term:", searchTerm);
+    
+            // Your existing logic for redirecting to different pages based on the search term
+            // ...
+    
+            if (searchTerm === 'extrusion') {
+                console.log("Redirecting to Extrusion_Struct.html");
+                window.location.href = 'Extrusion_Struct.html';
+            } else if (searchTerm === 'c channel') {
+                console.log("Redirecting to Cchannel_StructFinal.html");
+                window.location.href = 'Cchannel_StructFinal.html';
+            } else if (searchTerm === 'ultraplanetary motor') {
+                console.log("Redirecting to actuator1_Ultraplanetary.html");
+                window.location.href = 'actuator1_Ultraplanetary.html';
+            } else if (searchTerm === 'hd hex motor') {
+                console.log("Redirecting to Actuator2_HdHexMotor.html");
+                window.location.href = 'Actuator2_HdHexMotor.html';
+            } else if (searchTerm === 'driver station') {
+                console.log("Redirecting to DriverStation.html");
+                window.location.href = 'DriverStation.html';
+            } else if (searchTerm === 'control hub') {
+                console.log("Redirecting to ControlHUB.html");
+                window.location.href = 'ControlHUB.html';
+            } else if (searchTerm === 'chains tools') {
+                console.log("Redirecting to ChainsTool.html");
+                window.location.href = 'ChainsTool.html';
+            } else if (searchTerm === 'driver tools') {
+                console.log("Redirecting to DriverTools.html");
+                window.location.href = 'DriverTools.html';
+            } else if (searchTerm === 'sprocket gear') {
+                console.log("Redirecting to Gears.html");
+                window.location.href = 'Gears.html';
+            } else if (searchTerm === 'mecanum wheel') {
+                console.log("Redirecting to MecanumWheels.html");
+                window.location.href = 'MecanumWheels.html';
+            } else {
+                // Handle the case when the search term doesn't match any predefined terms
+                console.log("Search term not found:", searchTerm);
+                alert("Search term not found: " + searchTerm);
+            }
+        }
+    </script>
+    
+
+    <div class="image-row">
+        <div class="image-container">
+            <a style="text-decoration: none;" href="frcBasepage.html">
+            <h2 class="animated-left" style="color: #1a72b9; font-family: 'Montserrat', sans-serif; font-weight: 800;">First Robotics Challenge Parts</h2>
+            <img class="ion" src="RBM-01.png" /></a> <!--#1a72b9-->
+        </div>
+        <div class="image-container">
+            <a style="text-decoration: none;" href="FTC.html">
+            <h2 class="animated-right" style="color: #3aaf4a; font-family: 'Montserrat', sans-serif; font-weight: 800;">First Tech Challenge Parts</h2>
+            <img class="duo" src="RBM_DUO.png"></a> <!--#3aaf4a-->
+        </div>
+    </div>
+
+
+    <!--PARTS-->
+    <section id="part">
+    <div style="background-color: #ff6600;">
+        <center class="ion">
+        <p style="color: #ffffff; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 30px;">Our Most Selling Parts</p>
+        </center>
+    </div>
+    </section>
+    <section>
+    <div class="slideshow-container">
+        <!--EXTRUSION CHANNEL-->
+        <div class="mySlides">
+            <a href="SHOPPING_CART.html" style="text-decoration: none;">
+                <img class="slideshow-img" src="extrusion2.png">
+                <div class="text">
+                    <h1 style="color: #3aaf4a; font-family: 'Montserrat', sans-serif; font-weight: 800;">Extrusion (00001) - <b style="color: #ff0000;">₹ <s>1200</s> 1100</b></h1>
+                </div>
+            </a>
+        </div>
+        
+        <!--PART 2 - Brushless Motors-->
+            
+    <div class="mySlides">
+        <a href="SHOPPING_CART.html" style="text-decoration: none;">
+            <img class="slideshow-img" src="brush i2.webp">
+            <div class="text">
+                <h1 style="color: #1a72b9; font-family: 'Montserrat', sans-serif; font-weight: 800;">Brushless Motors (00013) - <b style="color: #ff0000;">₹ <s>2000</s> 1800</b></h1>
+            </div>
+        </a>
+    </div>
+
+    <!--PART 3 - C Channel-->
+            
+    <div class="mySlides">
+        <a href="SHOPPING_CART.html" style="text-decoration: none;">
+            <img class="slideshow-img" src="C_Channel_1.png">
+            <div class="text">
+                <h1 style="color: #3aaf4a; font-family: 'Montserrat', sans-serif; font-weight: 800;">C Channels (00002) - <b style="color: #ff0000;">₹ <s>1800</s> 1600</b></h1>
+            </div>
+        </a>
+    </div>
+
+    <!--PART 4 - Wheels-->
+            
+    <div class="mySlides">
+        <a href="SHOPPING_CART.html" style="text-decoration: none;">
+            <img class="slideshow-img" src="wheels i1.png">
+            <div class="text">
+                <h1 style="color: #1a72b9; font-family: 'Montserrat', sans-serif; font-weight: 800;">Wheels (00016) - <b style="color: #ff0000;">₹ <s>1000</s> 800</b></h1>
+            </div>
+        </a>
+    </div>
+    </section>        
+    
+            
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            if (slideIndex < 1) { slideIndex = slides.length }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+
+    <!--ABOUT US-->
+    <section id="aboutus">
+        <div style="background-color: #ff6600;">
+            <center>
+                <p style="color: #ffffff; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 30px;">About Us</p>
+            </center>
+        </div>
+    </section>
+    
+    <div style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 25px; margin-bottom: 60px;">
+        <div style="flex: 1; min-width: 250px; max-width: 300px; padding: 20px; text-align: center; box-shadow: -1px 0px 3px 3px #ff6600;">
+            <a style="text-decoration: none; color: #ff6600;" href="https://www.linkedin.com/in/raj-kothari200" target="_blank">
+                <img src="RAJ.jpg" alt="Image 1" style="max-width: 100%; max-height: 250px; object-fit: cover; border-radius: 10px;">
+                <h3 style="margin-top: 10px; font-family: 'Vampire Wars', cursive; letter-spacing: 4px; font-size: 33px;">Raj Kothari</h3>
+                <br><p style="margin-top: 5px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px;">
+                    Passionate about Robotics &nbsp; & Cricket. A proud Team Sigma member, representing India at FTC Asia Pacific Championship and WRO, winning the ‘Inspire Award’.
+                </p>
+            </a>
+        </div>
+    
+        <div style="flex: 1; min-width: 250px; max-width: 300px; padding: 20px; text-align: center; box-shadow: -1px 0px 3px 3px #ff6600;">
+            <img src="BHAVYA1.jpg" alt="Image 2" style="max-width: 100%; max-height: 250px; object-fit: cover; border-radius: 10px;">
+            <h3 style="margin-top: 10px; font-family: 'Vampire Wars', cursive; letter-spacing: 4px; font-size: 28px;">Bhavya Sanghrajka</h3>
+            <p style="margin-top: 5px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px;">
+                A tech enthusiast specializing in drones and robotics programming. Represented India at FTC Asia Pacific Championship with Team Sigma, securing the prestigious ‘Inspire Award’.
+            </p>
+        </div>
+    
+        <div style="flex: 1; min-width: 250px; max-width: 300px; padding: 20px; text-align: center; box-shadow: -1px 0px 3px 3px #ff6600;">
+            <a style="text-decoration: none; color: #ff6600;" href="https://www.linkedin.com/in/moksh-shah-278a0221a" target="_blank">
+                <img src="MOKSH1.jpeg" alt="Image 3" style="max-width: 100%; max-height: 250px; object-fit: cover; border-radius: 10px;">
+                <h3 style="margin-top: 10px; font-family: 'Vampire Wars', cursive; letter-spacing: 4px; font-size: 33px;">Moksh Shah</h3>
+                <br><p style="margin-top: 5px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px;">
+                    With a passion for robotics, blogging, and web design, Moksh has been involved in the robotics field since 11. A proud FTC & WRO competitor, turning passion into innovation.
+                </p>
+            </a>
+        </div>
+    
+        <div style="flex: 1; min-width: 250px; max-width: 300px; padding: 20px; text-align: center; box-shadow: -1px 0px 3px 3px #ff6600;">
+            <a style="text-decoration: none; color: #ff6600;" href="https://www.linkedin.com/in/raj-kothari200" target="_blank">
+                <img src="Ranveer.png" alt="Image 4" style="max-width: 100%; max-height: 250px; object-fit: cover; border-radius: 10px;">
+                <h3 style="margin-top: 10px; font-family: 'Vampire Wars', cursive; letter-spacing: 4px; font-size: 28px;">Ranveer Singh Thakur</h3>
+                <p style="margin-top: 5px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px;">
+                    Passionate about AI, blockchain, and software development, I thrive on innovation. As IEEE Joint Treasurer, I lead research projects and embrace Lord Krishna’s wisdom to balance logic with insight.</p>
+            </a>
+        </div>
+    </div>
+    
+
+    <script>
+        function addPopOutAnimation() {
+            var elements = document.getElementsByClassName("h3");
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].classList.add("pop-out-animation");
+                setTimeout(function (el) {
+                    el.classList.remove("pop-out-animation");
+                }, 2000, elements[i]);
+            }
+        }
+    </script>
+    <div style="height: 100px;"></div>
+
+    <!--CONTACT US-->
+    <footer id="footer" class="footer"> 
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <div class="footer-content">
+            <div class="categories" style="margin-top: 50px;">
+                <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff;">Categories</h3>
+                <BR>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;"><a href="frcBasepage.html">RBM ION</p></a>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;"><a href="FTC.html">RBM DUO</p></a>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;"><a href="#aboutus">About Us</p></a>
+            </div>
+            <div class="contact-info" style="margin-top: 50px;">
+                <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff;">Contact Us</h3>
+                <BR>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;">RBM Robotics</p>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;"><a href="https://maps.app.goo.gl/GBh9vVgXVoWkBNpR7">Ghatkopar, Mumbai</p></a>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;" class="phone-number" id="phone" onclick="clipboard('+91 66666 55555')">+91 66666 55555</p>
+                <p class="hover-text">Click to Copy</p>
+            </div>
+            <div class="product-types" style="margin-top: 50px;">
+                <h2 class="text-center mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;">Type in Your Feedback</h2>
+                
+                <form id="feedbackForm">
+                    <div class="contact-form">
+                        <div class="form-group">
+                            <label for="name" style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;">Your Name:</label>
+                            <input name="name" type="text" class="form-control" id="name" placeholder="Enter your name" required oninput="validateName(this)">
+                            <div id="name-error" style="color: rgb(255, 255, 255);"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;">Email address:</label>
+                            <input name="email" type="email" class="form-control" id="email" placeholder="Enter email" required oninput="validateEmail(this)">
+                            <div id="email-error" style="color: white;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;">Feedback:</label>
+                            <textarea name="message" class="form-control" id="message" rows="5" placeholder="Enter your feedback" required></textarea>
+                        </div>
+                        <button class="submit-button" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff; font-size: 18px;" onclick="submitAnimation(this)" type="button">Submit</button>
+                        <p class="success-message" id="successMessage"></p>
+                    </div>
+                </form>
+                <script>
+                    document.getElementById("feedbackForm").addEventListener("submit", async function(event) {
+                        event.preventDefault();
+                
+                        const name = document.getElementById("name").value;
+                        const email = document.getElementById("email").value;
+                        const message = document.getElementById("message").value;
+                
+                        const response = await fetch("/submit-feedback", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify({ name, email, message }),
+                        });
+                
+                        const result = await response.json();
+                        alert(result.message);
+                        if (result.success) {
+                            document.getElementById("feedbackForm").reset(); // Clear input fields
+                        }
+                    });
+                </script>                
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        async function submitAnimation(button) {
+            button.innerHTML = 'Submitting...';
+            button.disabled = true; // Prevent multiple clicks
+    
+            setTimeout(() => {
+                button.innerHTML = 'If email is entered correctly, you will receive a pop-up message';
+            }, 1000);
+    
+            try {
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const message = document.getElementById("message").value.trim();
+    
+                if (!name || !email || !message) {
+                    alert("All fields are required!");
+                    button.innerHTML = 'Submit';
+                    button.disabled = false;
+                    return;
+                }
+    
+                const response = await fetch("http://localhost:3000/submit-feedback", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ name, email, message }),
+                });
+    
+                const result = await response.json();
+    
+                if (result.success) {
+                    alert(result.message);
+                    document.getElementById("feedbackForm").reset();
+                } else {
+                    alert("Error: " + result.message);
+                }
+            } catch (error) {
+                console.error("Error submitting feedback:", error);
+                alert("Failed to submit feedback. Please try again.");
+            }
+    
+            setTimeout(() => {
+                button.innerHTML = 'Submit';
+                button.disabled = false;
+            }, 3000);
+        }
+    </script>    
+
+    <footer style="background-color: #ff6600;">
+        <center>
+        <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff; border-top: 1px solid #ffffff;">&copy; 2025 RBM Robotics. All rights reserved.</p></center>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script> //COPY CLIPBOARD
+    function clipboard(text) {
+        const input = document.createElement('input');
+        input.setAttribute('value', text);
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+        alert('Phone number copied to clipboard: ' + text);
+    }
+</script>
+
+
+<script> //QUERY
+        var form = document.getElementById('query');
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(form.action, {
+          method : "POST",
+          body: new FormData(document.getElementById("query")),
+      }).then(response => {
+                window.location.href = "HOME PAGE.html"; 
+                alert("Feedback Submitted Successfully");
+            });
+    });
+</script>
+
+<script>
+
+let params = {}
+
+let regex = /([^&=]+)=([^&]*)/g, m
+
+while(m = regex.exec(location.href)){
+    params[decodeURIComponent(m[1])] = decodeURIComponent(m[2])
+}
+
+if(Object.keys(params).length > 0){
+    localStorage.setItem('authInfo',JSON.stringify(params))
+}
+
+//hide access token
+
+window.history.pushState({},document.title,"/" + "HOME PAGE.html");
+let info = JSON.parse(localStorage.getItem('authInfo'))
+console.log(JSON.parse(localStorage.getItem('authInfo')))
+console.log(info['access_token'])
+console.log(info['expires_in'])
+
+fetch("https://www.googleapis.com/oauth2/v3/userinfo",{
+    headers:{
+        "Authorization":`Bearer ${info['access_token']}`
+    }
+})
+
+.then((data) => data.json())
+.then((info) => {
+    console.log(info)
+    document.getElementById('googlename').innerHTML += info.name
+    document.getElementById('googleimage').setAttribute('src', info.picture)
+})
+
+    function logout() {
+        fetch("https://oauth2.googleapis.com/revoke?token=" + info['access_token'], {
+            method:'POST',
+            headers:{
+                'Content-type' : 'application/x-www-form-urlencoded'
+            }
+        })
+        .then((data) => {
+            location.href = "http://127.0.0.1:5500/LOGIN.html"
+        })
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.tooltip {
+    position: relative;
+    display: inline;
+}
+
+.code-box {
+    display: none;
+    position: absolute;
+    background-color: #3aaf4a;
+    border: 2px solid #000000;
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif; 
+	font-weight: 500;
+	font-size: 12px;
+    padding: 10px;
+    max-width: 200px;
+}

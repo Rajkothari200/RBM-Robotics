@@ -1,0 +1,309 @@
+<!--Extrusion Channel  Structure1 Webpage-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrusion Channels - FRC</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="icon" href="TITLELOGO-02.png" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="FRCExtrusion_Struct.css">
+    <style>
+        /* Add your existing styles or any additional styles here */
+        /* Custom CSS for animation */
+        .slide-in {
+            opacity: 0;
+            transform: translateX(-50%);
+            animation: slideIn 1s forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .bg-dark {
+            background-color: #104672 !important; /*1a72b9*/
+        }
+
+        .bg-primary {
+            background-color: #1a72b9 !important;
+        }
+
+        .bg-secondary{
+            background-color: #1a72b9 !important;  /*first section*/
+        }
+        /* Adjust the carousel position to the left */
+        #imageCarousel {
+            margin-right: auto;
+            margin-left: 5%;
+        }
+
+        .carousel-inner {
+            text-align: left; /* Align the images to the right */
+        }
+
+        #textContainer {
+            max-width: 70%; /* Adjust the width as needed */
+            padding: 20px;
+        }
+
+        /* Adjust carousel control buttons position */
+        .carousel-control-prev, .carousel-control-next {
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%);
+            width: auto;
+            margin-right: 50%; /* Adjust margin-right to align with the image start */
+            margin-left: 0;
+            /*background-color: #ff6600;  Set the background color to black */
+        }
+
+        /* Align the right button with the end of the image */
+        .carousel-control-next {
+            margin-right: -5%;
+            margin-left: 0%;
+        }
+        /* Align the left button with the end of the image */
+        .carousel-control-prev {
+            margin-right: 0%;
+            margin-left: -5%;
+        }
+        
+        .carousel-control-next-icon, .carousel-control-prev-icon{
+            background-color: #1a72b9;
+            height: 60px;
+            width: 60px;
+        }
+
+        .submit-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #1a72b9;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        transition: all 0.3s ease 0s;
+        }
+        
+        .success-message {
+        display: none;
+        color: green;
+        margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header style="background-color: #ff6600; height: 60px;">
+        <!--Link Image to FTC Home Page-->
+        <a class="homepage" href="frcBasepage.html" style="color: aliceblue; margin-left: 1%; font-size: 30px;"><img src="ION REMOVED.png" width="150" height="35"></a>
+        <a href="CART2.html" style="color: white;"><button class="submit-button" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff; font-size: 18px; margin-left: 74%;" type="submit" class="btn btn-primary btn-block">
+            Add To Cart
+        </button></a>
+    </header>
+
+<section id="hero" class="bg-secondary text-white text-center py-5">
+        <div class="container">
+            <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 550;" class="display-">Revolutionize Your Robotics with ION System for FRC</h1>
+            <p style="font-family: 'Montserrat', sans-serif; font-weight: 400;" class="lead" style="font-size: 25px;">The FIRST Robotics Competition (FRC) is an international high school robotics competition that challenges teams of students to design, build, and program industrial-sized robots to complete specific tasks on a themed playing field.</p>
+        </div>
+</section>
+
+<section id="parts" class="py-5">
+    <div class="container">
+        <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active slide-in">
+                    <img src="extrusion i2.webp" class="d-block w-100">
+                </div>
+                <div class="carousel-item slide-in">
+                    <img src="extrusion i1.webp" class="d-block w-100">
+                </div>
+                <div class="carousel-item slide-in">
+                    <img src="extrusion i3.webp" class="d-block w-100">
+                </div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+<section id="features1" class="bg-primary text-white">
+    <center><h1 class="display-5" style="padding-top: 10px; color: #ffffff; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 30px;">Extrusion Channel - 00012</h1>
+        <div style="border-bottom: 1px solid white; padding-top: 5px; margin-left: -20%;"></div>
+        <p class="lead" style="font-size: 25px; padding-left: 20px; padding-top: 5px; padding-bottom: 10px; color: #ffffff; font-family: 'Montserrat', sans-serif; font-weight: 600;">RBM Building System also comes in a 15mm x 30mm square extrusion. The slots are designed to fit standard M3 hardware rather than expensive t-nuts. Use the 15mm x 30mm extrusion when more strength is needed for an application.</p>
+    </center>
+    </section>
+<br>
+<section id="features" class="bg-dark text-white" style="padding-left: 10px; margin-bottom: 10px;">
+    <h1 class="display-5" style="padding-top: 15px; color: #ffffff; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 30px;">&nbsp;Features</h1>
+    <p class="lead" style="font-size: 50px;">
+        <ul>
+            <li style="font-size: 25px;">All holes can be tapped with an M3 tap</li>
+            <li style="font-size: 25px;">Slots are compatible with standard M3 hex nuts and M3 hex-head cap screws as studs</li>
+        </ul>
+    </p>
+    <div style="border-bottom: 1px solid white; padding-top: 5px; margin-left: -20%;"></div>
+    <br>
+    <h2 class="display-6" style="color: #ffffff; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 30px;">&nbsp;Specifications</h2>
+    <p class="lead">
+        <ul>
+            <li style="font-size: 25px;">Material: 6063 Aluminum</li>
+            <li style="font-size: 25px;">Height: 15mm</li>
+            <li style="font-size: 25px;">Width: 30mm</li>
+            <li style="font-size: 25px;">Length: 1m</li>
+        </ul>
+    </p>
+    <div style="border-bottom: 1px solid white; padding-top: 5px; margin-left: -20%;"></div>
+    <br>
+    <h2 class="display-6" style="color: #ffffff; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 30px;">&nbsp;CAD and Drawings</h2>
+    <button class="submit-button" onclick="submitAnimationStep(this)" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff; font-size: 18px;" type="submit" class="btn btn-primary btn-block">
+        <a id="download-btn" href="https://www.revrobotics.com/content/cad/REV-41-1093.STEP" style="color: white;" download>RBM Extrusion Channel STEP File</a>
+    </button>
+    <p class="success-message" id="successMessage"></p>
+    <button class="submit-button" onclick="submitAnimationDraw(this)" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff; font-size: 18px;" type="submit" class="btn btn-primary btn-block">
+        <a id="download-btn" href="https://www.revrobotics.com/content/docs/15mmx30mm-Extrusion-DR.pdf" style="color: white;" download>RBM Extrusion Channel Drawing</a>
+    </button>
+    <p class="success-message" id="successMessage"></p>
+    <br><br>
+    <br><br><br><br>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Add JavaScript to trigger animation when the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+        const slideInElements = document.querySelectorAll('.slide-in');
+        slideInElements.forEach(element => {
+            element.style.animationPlayState = 'running';
+        });
+    });
+</script>
+
+<!--Download Button Animation-->
+<script>
+    function submitAnimationStep(button) {
+        setTimeout(function(){
+            button.innerHTML = 'Downloaded Successfully &#10003';
+        }, 3000);
+        
+        setTimeout(function(){
+            button.innerHTML = 'RBM Extrusion Channel STEP File';
+        }, 5000);
+    }
+
+    function submitAnimationDraw(button) {
+        setTimeout(function(){
+            button.innerHTML = 'Downloaded Successfully &#10003';
+        }, 3000);
+        
+        setTimeout(function(){
+            button.innerHTML = 'RBM Extrusion Channel Drawing File';
+        }, 5000);
+    }
+</script>
+
+<!--CONTACT US-->
+<footer id="footer" class="footer"> 
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    <div class="footer-content">
+        <div class="categories">
+            <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff;">Categories</h3>
+            <BR>
+            <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;"><a href="frcBasepage.html">RBM ION</p></a>
+            <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;"><a href="HOME PAGE.html">RBM Robotics</p></a>
+            <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;"><a href="HOME PAGE.html#aboutus">About Us</p></a>
+        </div>
+        <div class="contact-info">
+            <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff;">Contact Us</h3>
+            <BR>
+            <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;">RBM Robotics</p>
+            <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;"><a href="https://maps.app.goo.gl/GBh9vVgXVoWkBNpR7">Ghatkopar, Mumbai</p></a>
+            <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;" class="phone-number" id="phone" onclick="clipboard('+91 66666 55555')">+91 66666 55555</p>
+            <p class="hover-text">Click to Copy</p>
+        </div>
+        <div class="product-types">
+            <h2 class="text-center mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;">Type in Your Queries</h2>
+            <form name="query" id="query" action="https://sheetdb.io/api/v1/ytxcwmqiyfxu2" method="post">
+            <div class="contact-form">
+            <div class="form-group">
+                <label style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;" for="name">Your Name:</label>
+                <input name="data[Name]" type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;" for="email">Email address:</label>
+                <input name="data[Email]" type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;" for="message">Query:</label>
+                <textarea name="data[Query]" class="form-control" id="message" rows="5" placeholder="Enter your query" required></textarea>
+            </div>
+            <button class="submit-button" onclick="submitAnimation(this)" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff; font-size: 18px;" type="submit" class="btn btn-primary btn-block">Submit</button>
+            <p class="success-message" id="successMessage"></p>
+        </div>
+            </form>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function submitAnimation(button) {
+        button.innerHTML = 'If the email is entered correctly, you will receive a pop-up message';
+        setTimeout(function(){
+            button.innerHTML = 'Submit';
+        }, 2000);
+        
+    }
+</script>
+
+<footer style="background-color: #1a72b9;">
+    <centre>
+    <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff; border-top: 1px solid #ffffff;">&copy; 2025 RBM Robotics. All rights reserved.</p></centre>
+</footer>
+
+<script> //COPY CLIPBOARD
+    function clipboard(text) {
+        const input = document.createElement('input');
+        input.setAttribute('value', text);
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+        alert('Phone number copied to clipboard: ' + text);
+    }
+</script>
+<script> //QUERY
+    var form = document.getElementById('query');
+    form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+      method : "POST",
+      body: new FormData(document.getElementById("query")),
+    }).then(response => {
+            window.location.href = "FTC.html"; 
+            alert("Query Submitted Successfully");
+        });
+});
+</script>
+
+</body>
+</html>

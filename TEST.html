@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add your stylesheet link here -->
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        .slideshow-container {
+            position: relative;
+        }
+        .mySlides {
+            display: block;
+        }
+        .slideshow-img {
+            width: 100%; /* Adjust as per your requirements */
+        }
+        .text {
+            position: relative;
+            color: #3aaf4a;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+        .box {
+            display: none;
+            position: absolute;
+            background-color: #3aaf4a;
+            border: 2px solid #000000;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            padding: 10px;
+            max-width: 200px;
+            z-index: 1;
+        }
+    </style>
+    <title>Slideshow Example</title>
+</head>
+<body>
+    <div class="slideshow-container">
+        <!--EXTRUSION CHANNEL-->
+        <div class="mySlides">
+            <a href="CART.html" styl="text-decoration: none;">
+                <img class="slideshow-img" src="extrusion2.png" style="width:1000px; height:500px;">
+                <div class="text" onmouseover="showBox()" onmouseout="hideBox()">
+                    Extrusion (00001) - <b style="color: #ff0000;">₹ <s>1200</s> 1100</b>
+                    <div class="box" id="box">
+                        This is a 15mm x 30mm square extrusion. The slots are designed to fit standard M3 hardware rather than expensive t-nuts. Use the 15mm x 30mm extrusion when more strength is needed for an application.
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function showBox() {
+            var box = document.getElementById("box");
+            box.style.display = "block";
+        }
+        function hideBox() {
+            var box = document.getElementById("box");
+            box.style.display = "none";
+        }
+    </script>
+</body>
+</html>

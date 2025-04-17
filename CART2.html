@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - RBM Robotics</title>
+    <link rel="icon" href="TITLELOGO-02.png" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cart2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <!--Bootstrap Navigation Bar-->
+        <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+            <a class="navbar-brand" href="#">
+            <img src="LOGO-03.png" class="logo" width="160" height="90">
+            </a>
+            <!--<h4><span class="navbar-text text-slide">Quality Robotics Components</span></h4>-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                         
+                    <li class="nav-item">
+                        <br><h5 class="homefont" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff;"><a class="nav-link" href="HOME PAGE.html">Home <span class="sr-only">(current)</span></a></h5>
+                    </li>
+                    <li class="nav-item">
+                        <br><h5 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff;"><a class="nav-link" href="#footer">Contact Us</a></h5>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="text-center">Products</h2>
+                <div class="row">
+                    
+                    <!-- Product 1 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="extrusion2.png" alt="Extrusion">
+                            <div class="card-body">
+                                <h5 class="card-title">Extrusion</h5>
+                                <p class="card-text">High-quality aluminum extrusion for robotics frames.</p>
+                                <p class="card-price"><del>₹1400</del> ₹1100</p>
+                                <button class="btn btn-add">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="brush i2.webp" alt="Brushless Motor">
+                            <div class="card-body">
+                                <h5 class="card-title">Brushless Motor</h5>
+                                <p class="card-text">Efficient and powerful brushless motor for high-performance applications.</p>
+                                <p class="card-price"><del>₹2200</del> ₹1800</p>
+                                <button class="btn btn-add">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="C_Channel_1.png" alt="C Channel">
+                            <div class="card-body">
+                                <h5 class="card-title">C Channel</h5>
+                                <p class="card-text">Durable C Channel for structural support in robotics.</p>
+                                <p class="card-price"><del>₹2000</del> ₹1600</p>
+                                <button class="btn btn-add">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="wheels i1.png" alt="Mecanum Wheels">
+                            <div class="card-body">
+                                <h5 class="card-title">Wheels</h5>
+                                <p class="card-text">Omni-directional mecanum wheels for flexible movement.</p>
+                                <p class="card-price"><del>₹1000</del> ₹800</p>
+                                <button class="btn btn-add">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="electronic i2.webp" alt="Electronics">
+                            <div class="card-body">
+                                <h5 class="card-title">Electronics</h5>
+                                <p class="card-text">The 2m Distance Sensor uses the ST Microelectronics VL53L0X Time-of-Flight (ToF) laser-ranging module</p>
+                                <p class="card-price"><del>₹3000</del> ₹2500</p>
+                                <button class="btn btn-add">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="2025starterbotfrc.gif" alt="Electronics">
+                            <div class="card-body">
+                                <h5 class="card-title">Starter Bot FRC</h5>
+                                <p class="card-text">Meet the 2025 REV ION FRC Starter Bot</p>
+                                <p class="card-price"><del>₹20000</del> ₹19000</p>
+                                <button class="btn btn-add">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="hdhex1.png" alt="Electronics">
+                            <div class="card-body">
+                                <h5 class="card-title">Ultraplanetary Motor</h5>
+                                <p class="card-text">The UltraPlanetary Gearbox Kit is the entry point into using the UltraPlanetary System.</p>
+                                <p class="card-price"><del>₹2500</del> ₹2300</p>
+                                <button class="btn btn-add">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="Chain1.png" alt="Electronics">
+                            <div class="card-body">
+                                <h5 class="card-title">Chain tools</h5>
+                                <p class="card-text">The #25 Chain and Metal Sprocket Bundle can be used to change the speed, torque or direction of a motor.</p>
+                                <p class="card-price"><del>₹800</del> ₹780</p>
+                                <button class="btn btn-add">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="Gear1.png" alt="Electronics">
+                            <div class="card-body">
+                                <h5 class="card-title">Sprocket Gear</h5>
+                                <p class="card-text">DUO Plastic #25 Sprockets are compatible with the REV DUO System and fit on a 5mm hex shaft.</p>
+                                <p class="card-price"><del>₹800</del> ₹780</p>
+                                <button class="btn btn-add">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 10 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="starterBot_frc.png" alt="Electronics">
+                            <div class="card-body">
+                                <h5 class="card-title">Starter Bot FTC</h5>
+                                <p class="card-text">Meet the 2024-25 RBM DUO FTC Starter Bot! </p>
+                                <p class="card-price"><del>₹10000</del> ₹9000</p>
+                                <button class="btn btn-add">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h2>Cart</h2>
+                <ul id="cart-items" class="list-group"></ul>
+                <h4>Total: <span id="total-price">0</span></h4>
+
+                
+                <div id="promo-section">
+                    <h5>Available Promo Codes:</h5>
+                    <ul id="promo-list" class="list-group"></ul>
+                </div>
+                
+                
+                <input type="text" id="promo-code" placeholder="Enter Promo Code" class="form-control">
+                <button class="btn btn-primary mt-2" onclick="applyPromoCode()">Apply</button>
+                <button class="btn btn-success mt-2" onclick="proceedToCheckout()">Proceed</button>
+                <p id="discount-msg" class="text-success"></p>
+            </div>
+        </div>
+    </div>
+    <div style="height: 100px;"></div>
+
+    
+        <!--CONTACT US-->
+        <footer id="footer" class="footer"> 
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <div class="footer-content">
+                <div class="categories" style="margin-top: 50px;">
+                    <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff;">Categories</h3>
+                    <BR>
+                    <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;"><a href="frcBasepage.html">RBM ION</p></a>
+                    <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;"><a href="FTC.html">RBM DUO</p></a>
+                    <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;"><a href="#aboutus">About Us</p></a>
+                </div>
+                <div class="contact-info" style="margin-top: 50px;">
+                    <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff;">Contact Us</h3>
+                    <BR>
+                    <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;">RBM Robotics</p>
+                    <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;"><a href="https://maps.app.goo.gl/GBh9vVgXVoWkBNpR7">Ghatkopar, Mumbai</p></a>
+                    <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;" class="phone-number" id="phone" onclick="clipboard('+91 66666 55555')">+91 66666 55555</p>
+                    <p class="hover-text">Click to Copy</p>
+                </div>
+                <div class="product-types" style="margin-top: 50px;">
+                    <h2 class="text-center mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;">Type in Your Feedback</h2>
+                    <form name="query" id="query" action="https://sheetdb.io/api/v1/ytxcwmqiyfxu2" method="post">
+                    <div class="contact-form">
+                        <div class="form-group">
+                            <label style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;" for="name">Your Name:</label>
+                            <input name="data[Name]" type="text" class="form-control" id="name" placeholder="Enter your name" required oninput="validateName(this)">
+                            <div id="name-error" style="color: rgb(255, 255, 255);"></div>
+                        </div>
+                        <div class="form-group">
+                            <label style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;" for="email">Email address:</label>
+                            <input name="data[Email]" type="email" class="form-control" id="email" placeholder="Enter email" required oninput="validateEmail(this)">
+                            <div id="email-error" style="color: white;"></div>
+                        </div>
+                    <div class="form-group">
+                        <label style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff;" for="message">Feedback:</label>
+                        <textarea name="data[Query]" class="form-control" id="message" rows="5" placeholder="Enter your feedback" required></textarea>
+                    </div>
+                    <button class="submit-button" onclick="submitAnimation(this)" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color:#ffffff; font-size: 18px;" type="submit" class="btn btn-primary btn-block">Submit</button>
+                    <p class="success-message" id="successMessage"></p>
+                </div>
+                    </form>
+    
+                    <script>
+                        function validateName(input) {
+                            var name = input.value.trim();
+                            var nameRegex = /^[A-Za-z]+$/;
+                
+                            var errorDiv = document.getElementById('name-error');
+                
+                            if (name === "") {
+                                errorDiv.textContent = "Name should not be empty";
+                            } else if (!nameRegex.test(name)) {
+                                errorDiv.textContent = "Name should contain only alphabets";
+                            } else {
+                                errorDiv.textContent = "";
+                            }
+                        }
+    
+                        function validateEmail(input) {
+                var email = input.value.trim();
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+                var errorDiv = document.getElementById('email-error');
+    
+                if (email === "") {
+                    errorDiv.textContent = "Email should not be empty";
+                } else if (!emailRegex.test(email)) {
+                    errorDiv.textContent = "Invalid email format";
+                } else if (email.endsWith(".com") && email.indexOf('@') !== -1 && email.indexOf('@') < email.indexOf('.com')) {
+                    errorDiv.textContent = "";
+                } else if (!email.endsWith(".com")) {
+                    errorDiv.textContent = "Email should end with .com";
+                } else {
+                    errorDiv.textContent = "Invalid email format";
+                }
+            }
+                    </script>
+                </div>
+            </div>
+        </footer>
+    
+        <script>
+            function submitAnimation(button) {
+                button.innerHTML = 'If email is entered correctly, you will receive pop-up message';
+                setTimeout(function(){
+                    button.innerHTML = 'Submit';
+                }, 2000);
+                
+            }
+        </script>
+    
+    <footer style="background-color: #39b04A;">
+        <center>
+        <p style="font-family: 'Montserrat', sans-serif; font-weight: 500; color:#ffffff; border-top: 1px solid #ffffff;">&copy; 2025 RBM Robotics. All rights reserved.</p></center>
+    </footer>
+    
+        <!-- Bootstrap JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script> //COPY CLIPBOARD
+        function clipboard(text) {
+            const input = document.createElement('input');
+            input.setAttribute('value', text);
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+            alert('Phone number copied to clipboard: ' + text);
+        }
+    </script>
+    
+    
+    <script> //QUERY
+            var form = document.getElementById('query');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("query")),
+          }).then(response => {
+                    window.location.href = "HOME PAGE.html"; 
+                    alert("Feedback Submitted Successfully");
+                });
+        });
+    </script>
+    
+    <script>
+    
+    let params = {}
+    
+    let regex = /([^&=]+)=([^&]*)/g, m
+    
+    while(m = regex.exec(location.href)){
+        params[decodeURIComponent(m[1])] = decodeURIComponent(m[2])
+    }
+    
+    if(Object.keys(params).length > 0){
+        localStorage.setItem('authInfo',JSON.stringify(params))
+    }
+    
+    //hide access token
+    
+    window.history.pushState({},document.title,"/" + "HOME PAGE.html");
+    let info = JSON.parse(localStorage.getItem('authInfo'))
+    console.log(JSON.parse(localStorage.getItem('authInfo')))
+    console.log(info['access_token'])
+    console.log(info['expires_in'])
+    
+    fetch("https://www.googleapis.com/oauth2/v3/userinfo",{
+        headers:{
+            "Authorization":`Bearer ${info['access_token']}`
+        }
+    })
+    
+    .then((data) => data.json())
+    .then((info) => {
+        console.log(info)
+        document.getElementById('googlename').innerHTML += info.name
+        document.getElementById('googleimage').setAttribute('src', info.picture)
+    })
+    
+        function logout() {
+            fetch("https://oauth2.googleapis.com/revoke?token=" + info['access_token'], {
+                method:'POST',
+                headers:{
+                    'Content-type' : 'application/x-www-form-urlencoded'
+                }
+            })
+            .then((data) => {
+                location.href = "http://127.0.0.1:5500/LOGIN.html"
+            })
+        }
+    </script>
+    
+    <script src="cart.js"></script>
+    
+    </body>
+    </html>
+    

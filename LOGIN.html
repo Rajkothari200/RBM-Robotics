@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBM Robotics - Login</title>
+    <link rel="icon" href="TITLELOGO-02.png" type="image/png">
+	<link rel="stylesheet" href="LOGIN.css">
+</head>
+<body>
+    <div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form id="signu">
+			<h1>Create Account</h1>
+			<input id="signup-username" type="text" placeholder="Username" required/>
+			<input id="signup-email" type="email" placeholder="Email" required oninput="validateEmail(this)">
+    		<div id="email-error" style="color: rgb(255, 0, 0);"></div>
+			<input id="signup-password" type="password" placeholder="Password" maxlength="6" minlength="6" required/>
+			<button type="submit">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form id="signi">
+			<h1>Sign in</h1>
+			<input id="login-email" type="email" placeholder="Email" required oninput="validateEmail(this)">
+    		<div id="email-error" style="color: rgb(255, 0, 0);"></div>
+			<input id="login-password" type="password" placeholder="Password" minlength="6" maxlength="6" required/>
+			<button type="submit">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Geeks!</h1>
+				<p>Enter your personal details and start your Robotics journey with us</p>
+				<button class="ghost" id="signUp" type="button">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+    async function registerUser(event) {
+        event.preventDefault();
+        const username = document.getElementById('signup-username').value;
+        const email = document.getElementById('signup-email').value;
+        const password = document.getElementById('signup-password').value;
+        
+        const response = await fetch('http://localhost:3000/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, email, password })
+        });
+
+        const data = await response.json();
+        alert(data.message);
+        if (data.success) {
+            window.location.href = 'HOME PAGE.html'; 
+        }
+    }
+
+    async function loginUser(event) {
+        event.preventDefault();
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+        
+        const response = await fetch('http://localhost:3000/login', { 
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+        if (data.success) {
+            window.location.href = 'HOME PAGE.html';  
+        } else {
+            alert(data.message);
+        }
+    }
+
+    document.getElementById('signu').addEventListener('submit', registerUser);
+    document.getElementById('signi').addEventListener('submit', loginUser);
+</script>
+
+
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
+</body>
+</html>
